@@ -6,7 +6,7 @@ import threading as td
 
 def MainFunction(ids, nama, nilai):
     http = urllib3.PoolManager()
-    url = 'localhost/kbiot/add_data.php?id=' + ids + '&nama=' + nama + '&nilai=' + str(nilai)
+    url = '192.168.0.182/IOTMaster/add_data.php?id=' + ids + '&nama=' + nama + '&nilai=' + str(nilai)
     resp = http.request('GET', url)
 
     #resp.status, resp.data
